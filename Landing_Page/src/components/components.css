@@ -1,0 +1,40 @@
+.question-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    margin-bottom: 15px;
+}
+
+p {
+    padding: 2px;
+    margin: 2px;
+}
+
+.scroll-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-icon {
+    position: relative;
+    width: 1.1em;
+    height: 1.8em;
+    border-radius: 2em;
+    border: .1em solid white;
+    opacity: 50%;
+    margin: auto;
+}
+
+.wheel {
+    position: absolute;
+    height: .4em;
+    width: .1em;
+    background-color: rgb(224, 224, 224);
+    top: 7px;
+    left: 8px;
+    border-radius: 50%;
+}

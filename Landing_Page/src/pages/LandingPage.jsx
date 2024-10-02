@@ -1,14 +1,32 @@
 import QuestionsComp from "../components/QuestionsComp"
 import ButtonComponent from "../components/ButtonComponent"
 import "./landing-page.css"
+import ImageOverlay from "../components/ImageOverlay"
 
 function LandingPage() {
   return (
     <div className="landing-page-container">
+
       <div className="cards-container">
-        <img src="/logo.svg" />
-        <h1>Unlock Seamless Efficiency</h1>
-        <ButtonComponent text="Join Waitlist"/>
+        <div className="second-page-center">
+          <img src="/logo.svg" />
+          <h1>Unlock Seamless Efficiency</h1>
+          <ButtonComponent text="Join Waitlist" />
+        </div>
+
+        <div className="circular-images">
+          <img className="circle-image" src="/To Do.png" alt="Mini Image 1" />
+          <img className="circle-image" src="/Event.png" alt="Mini Image 2" />
+          <img className="circle-image" src="/Tab.png" alt="Mini Image 3" />
+          <img className="circle-image" src="/Tab.png" alt="Mini Image 4" />
+          <img className="circle-image" src="/Reservation.png" alt="Mini Image 5" />
+          <img className="circle-image" src="/Card.png" alt="Mini Image 6" />
+          <img className="circle-image" src="/Tab.png" alt="Mini Image 7" />
+          <img className="circle-image" src="/Event.png" alt="Mini Image 8" />
+          <img className="circle-image" src="/Tab.png" alt="Mini Image 9" />
+          <img className="circle-image" src="/tickets_card.png" alt="Mini Image 10" />
+        </div>
+
       </div>
 
       <div className="feature-heading">
@@ -73,8 +91,9 @@ function LandingPage() {
         </div>
       </div>
       <h1>Fluid AI was born out of a desire to simplify and streamline modern life</h1>
-      <div className="feature-images-container">
 
+      <div className="feature-images-container">
+        <ImageOverlay />
       </div>
 
       <div className="question-section">

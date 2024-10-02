@@ -5,13 +5,30 @@ body {
     margin: 0;
 }
 
-.feature-heading{
-width: 40vw;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-margin:0 auto 4em;
+.cards-container {
+    height: 50em;
+    background-image: url("/mesh2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em;
+    gap: 2em;
+}
+
+.cards-container img{
+    height: 1.8em;
+}
+
+
+.feature-heading {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 4em;
 }
 
 .features {
@@ -26,15 +43,15 @@ margin:0 auto 4em;
     width: 60%;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.feature-2{
+.feature-2 {
     margin-left: 28em;
 }
 
-.feature-1{
+.feature-1 {
     margin-right: 25.6em;
 }
 
@@ -42,7 +59,7 @@ margin:0 auto 4em;
     margin: auto 1em;
 }
 
-.feature .img-container img{
+.feature .img-container img {
     display: flex;
     width: 376px;
     height: 773px;
@@ -52,22 +69,29 @@ margin:0 auto 4em;
     width: 400px;
 }
 
-.detail-text{
+.detail-text {
     opacity: 50%;
 }
 
-.question-section{
+.question-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 8em 3em;
 }
 
-.question-section .left-side{
+.question-section .left-side {
     width: 430px;
 }
 
-.waitlist-container{
+.feature-images-container {
+    height: 400px;
+    background-image: url("/image.png");
+    background-size: cover;
+}
+
+
+.waitlist-container {
     /* width: 100%; */
     height: 500px;
     background-image: url("/mesh3.png");
@@ -77,18 +101,18 @@ margin:0 auto 4em;
     padding: 0 0 2.5em 3em;
 }
 
-.waitlist-container img{
+.waitlist-container img {
     height: 450px;
 }
 
-.waitlist-form form{
+.waitlist-form form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 20em;
 }
 
-.waitlist-form form input{
+.waitlist-form form input {
     outline: none;
     border: none;
     background-color: transparent;
@@ -96,3 +120,41 @@ margin:0 auto 4em;
     padding: 10px 10px 10px 0;
 }
 
+.footer {
+    margin: 1em 2em;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.right-side-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+    margin: 10px 1em;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #f39c12;
+    /* Change to your desired hover color */
+}

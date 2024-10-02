@@ -5,11 +5,16 @@ import "./landing-page.css"
 function LandingPage() {
   return (
     <div className="landing-page-container">
+      <div className="cards-container">
+        <img src="/logo.svg" />
+        <h1>Unlock Seamless Efficiency</h1>
+        <ButtonComponent text="Join Waitlist"/>
+      </div>
+
       <div className="feature-heading">
         <p className="detail-text">Our Features</p>
         <h1>Fluid AI was born out of a desire to simplify and streamline modern life</h1>
       </div>
-
 
       <div className="features">
 
@@ -67,6 +72,10 @@ function LandingPage() {
 
         </div>
       </div>
+      <h1>Fluid AI was born out of a desire to simplify and streamline modern life</h1>
+      <div className="feature-images-container">
+
+      </div>
 
       <div className="question-section">
         <div className="left-side">
@@ -104,10 +113,28 @@ function LandingPage() {
 
       <div className="footer">
         <div className="left-side-footer">
-
+          <img src="/logo.svg" height="23px" />
+          <p className="detail-text">2024 Fluid AI</p>
         </div>
+
         <div className="right-side-footer">
-          
+          <div className="footer-column">
+            <ul>
+              <li><a href="/help-center" className="detail-text">Our Features</a></li>
+              <li><a href="/contact-us" className="detail-text">Areas</a></li>
+              <li><a href="/shipping-info" className="detail-text">FAQs</a></li>
+              <li><a href="/returns" className="detail-text">The Waitlist</a></li>
+              <li><a href="/returns" className="detail-text">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <ul>
+              <li><a href="/about-us" className="detail-text">Terms of Service</a></li>
+              <li><a href="/careers" className="detail-text">Privacy Policy</a></li>
+
+            </ul>
+          </div>
         </div>
       </div>
     </div>

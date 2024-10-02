@@ -39,7 +39,7 @@ p {
     border-radius: 50%;
 }
 
-.button-container{
+.button-container {
     height: 35px;
     width: 120px;
     background-color: white;
@@ -51,9 +51,21 @@ p {
     margin: 30px 0;
 }
 
-.button-container button{
+.button-container button {
     background-color: transparent;
     outline: none;
     border: none;
     font-weight: 500;
+}
+
+.image-overlay-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 400px;
+    padding: 10px 20px;
+    background-color: #90303000;
+    border-radius: 32px;
+    border: 1px solid rgb(207, 207, 207);
 }

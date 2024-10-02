@@ -10,21 +10,21 @@ function LandingPage() {
       <div className="cards-container">
         <div className="second-page-center">
           <img src="/logo.svg" />
-          <h1>Unlock Seamless Efficiency</h1>
+          <h1>Unlock Seamless <br/> Efficiency</h1>
           <ButtonComponent text="Join Waitlist" />
         </div>
 
         <div className="circular-images">
-          <img className="circle-image" src="/To Do.png" alt="Mini Image 1" />
-          <img className="circle-image" src="/Event.png" alt="Mini Image 2" />
-          <img className="circle-image" src="/Tab.png" alt="Mini Image 3" />
-          <img className="circle-image" src="/Tab.png" alt="Mini Image 4" />
-          <img className="circle-image" src="/Reservation.png" alt="Mini Image 5" />
-          <img className="circle-image" src="/Card.png" alt="Mini Image 6" />
-          <img className="circle-image" src="/Tab.png" alt="Mini Image 7" />
-          <img className="circle-image" src="/Event.png" alt="Mini Image 8" />
-          <img className="circle-image" src="/Tab.png" alt="Mini Image 9" />
-          <img className="circle-image" src="/tickets_card.png" alt="Mini Image 10" />
+          <img className="circle-image" src="/To Do.png" alt="Mini Image 1" width="150px"/>
+          <img className="circle-image" src="/Event.png" alt="Mini Image 2" width="200px" />
+          <img className="circle-image" src="/Tab.png" alt="Mini Image 3" width="100px" />
+          <img className="circle-image" src="/Tab.png" alt="Mini Image 4"  width="100px"/>
+          <img className="circle-image" src="/Reservation.png" alt="Mini Image 5" width="190px" />
+          <img className="circle-image" src="/Card.png" alt="Mini Image 6" width="200px" />
+          <img className="circle-image" src="/Tab.png" alt="Mini Image 7" width="100px" />
+          <img className="circle-image" src="/Event.png" alt="Mini Image 8" width="200px" />
+          <img className="circle-image" src="/Tab.png" alt="Mini Image 9" width="100px"  />
+          <img className="circle-image" src="/tickets_card.png" alt="Mini Image 10" width="260px"  />
         </div>
 
       </div>
@@ -90,15 +90,14 @@ function LandingPage() {
 
         </div>
       </div>
-      <h1>Fluid AI was born out of a desire to simplify and streamline modern life</h1>
-
+      <h1 style={{width:"60vw", padding:"2.5em 0 0 30px"}}>Fluid AI was born out of a desire to simplify and streamline modern life</h1>
       <div className="feature-images-container">
         <ImageOverlay />
       </div>
 
       <div className="question-section">
         <div className="left-side">
-          <h1>Fluid AI: Simplify, Organize, and Achieve More</h1>
+          <h1>What can curiosity, wonder, and awe do for you?</h1>
           <p className="detail-text"> Research shows that experiencing curiosity and
             awe can immensely benefit our mental, physical, and professional health.
             Here’s a brief overview of what curiosity and awe can do for you</p>

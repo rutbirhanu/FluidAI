@@ -5,81 +5,87 @@ body {
     margin: 0;
 }
 
-.cards-container {
-    position: relative;
+h1 {
+    font-weight: 400;
+    font-size: 40px;
 }
 
-.circle-images{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: aqua;
- 
+h3{
+    font-weight: 400;
+    font-size: 19px;
 }
+
+.cards-container {
+    position: relative;
+
+}
+
+
 .circle-image {
     position: absolute;
-   width: 200px;
-    height: 40em;
-    object-fit: cover;
+}
+
+.second-page-center img {
+    height: 1.8em;
 }
 
 .circle-image:nth-child(1) {
-    top: 7%;
-    left: 68%;
+    top: 10%;
+    left: 74%;
     transform: translateX(-50%);
 }
 
 .circle-image:nth-child(2) {
-    top: 20%;
-    left: 80%;
+    top: 27%;
+    left: 79%;
     transform: translateY(-50%);
 }
 
 .circle-image:nth-child(3) {
-    top: 35%;
+    top: 38%;
     right: 0%;
     transform: translateX(-50%);
 }
 
 .circle-image:nth-child(4) {
-    top: 45%;
+    top: 46%;
     right: 10%;
     transform: translateY(-50%);
 }
 
 .circle-image:nth-child(5) {
-    top: 60%;
-    right: 26%;
+    top: 57%;
+    right: 20%;
     transform: translateY(-50%);
 }
 
 .circle-image:nth-child(6) {
-    top: 7%;
-    left: 25%;
+    top: 15%;
+    left: 15%;
     transform: translateY(-50%);
 }
 
 .circle-image:nth-child(7) {
-    top: 10%;
+    top: 27%;
     left: 0%;
     transform: translateY(-50%);
 }
 
 .circle-image:nth-child(8) {
-    top: 35%;
+    top: 42%;
     left: 0%;
     transform: translateY(-50%);
 }
 
 .circle-image:nth-child(9) {
-    top: 45%;
+    top: 47%;
     left: 20%;
     transform: translateY(-50%);
 }
 
 .circle-image:nth-child(10) {
-    top: 60%;
-    left: 34%;
+    top: 62%;
+    left: 15%;
     transform: translateY(-50%);
 }
 
@@ -96,9 +102,6 @@ body {
     gap: 2em;
 }
 
-.cards-container img {
-    height: 1.8em;
-}
 
 
 .feature-heading {
@@ -107,7 +110,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 4em;
+    margin: 2em auto 2em;
 }
 
 .features {
@@ -150,6 +153,7 @@ body {
 
 .detail-text {
     opacity: 50%;
+    font-size: 14px;
 }
 
 .question-section {
@@ -165,8 +169,11 @@ body {
 
 .feature-images-container {
     height: 100vh;
-    background-image: url("/image.png");
+    background-image: url("/image_1.png");
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

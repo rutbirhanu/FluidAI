@@ -2,6 +2,7 @@
 import "./components.css"
 
 function ButtonComponent({text}) {
+  
   return (
       <div className="button-container">
           <button>{text}</button>

@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="app">
-      {!isAnimating && <FirstPage onAnimate={handleAnimate} isAnimating={isAnimating} />} {/* Only show the first page if the second page has not appeared */}
+      {<FirstPage onAnimate={handleAnimate} isAnimating={isAnimating} />} {/* Only show the first page if the second page has not appeared */}
       {isAnimating && <LandingPage isAnimating={isAnimating} />}
     </div>
   )

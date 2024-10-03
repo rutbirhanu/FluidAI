@@ -62,10 +62,16 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 350px;
-    height: 400px;
+    width: 310px;
+    height: 360px;
     padding: 10px 20px;
-    background-color: #90303000;
+    background-image: linear-gradient(to bottom, #BABABA00, #BABABA66);
     border-radius: 32px;
     border: 1px solid rgb(207, 207, 207);
+    margin-right: 10px;
+}
+
+.overlay-parent-container{
+    display: flex;
+    align-items: center;
 }

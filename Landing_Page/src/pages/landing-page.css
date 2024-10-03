@@ -10,7 +10,7 @@ h1 {
     font-size: 40px;
 }
 
-h3{
+h3 {
     font-weight: 400;
     font-size: 19px;
 }
@@ -36,7 +36,7 @@ h3{
 }
 
 .circle-image:nth-child(2) {
-    top: 27%;
+    top: 21%;
     left: 79%;
     transform: translateY(-50%);
 }
@@ -103,7 +103,6 @@ h3{
 }
 
 
-
 .feature-heading {
     width: 40vw;
     display: flex;
@@ -160,7 +159,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 8em 3em;
+    margin: 6em 3em;
 }
 
 .question-section .left-side {
@@ -168,23 +167,23 @@ h3{
 }
 
 .feature-images-container {
+    width: 100%;
     height: 100vh;
     background-image: url("/image_1.png");
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
 .waitlist-container {
-    /* width: 100%; */
     height: 500px;
     background-image: url("/mesh3.png");
     display: flex;
     align-items: end;
-    margin: 70px 0 50px 0;
-    padding: 0 0 2.5em 3em;
+    margin: 70px 0 5em 0;
+    padding: 0 0 0 3em;
 }
 
 .waitlist-container img {
@@ -198,12 +197,18 @@ h3{
     width: 20em;
 }
 
-.waitlist-form form input {
+.waitlist-form form input,
+select {
     outline: none;
     border: none;
     background-color: transparent;
     border-bottom: 1px solid rgb(157, 157, 157);
     padding: 10px 10px 10px 0;
+}
+
+.waitlist-form form select {
+    color: white;
+    opacity: 90%;
 }
 
 .footer {

@@ -1,33 +1,89 @@
+/* eslint-disable react/prop-types */
 import QuestionsComp from "../components/QuestionsComp"
 import ButtonComponent from "../components/ButtonComponent"
 import "./landing-page.css"
 import ImageOverlay from "../components/ImageOverlay"
+import { motion } from 'framer-motion';
 
-function LandingPage() {
+function LandingPage({ isAnimating }) {
+
+
   return (
     <div className="landing-page-container">
 
-      <div className="cards-container">
+      <motion.div className="cards-container"
+        //  initial={{ y: '100vh', opacity: 0 }}  // Start off-screen
+        //  animate={showSecondPage ? { y: 0, opacity: 1 } : { y: '100vh', opacity: 0 }}  // Animate up when triggered
+        //   transition={{ type: 'spring', stiffness: 50, duration: 1 }}
+
+        initial={{ y: '100vh', opacity: 0 }} // Start from below the viewport
+        animate={{
+          y: isAnimating ? 0 : '100vh', // Move up when animation is triggered
+          opacity: isAnimating ? 1 : 0,
+        }}
+
+        transition={{ duration: 1, ease: 'easeInOut' }}
+      >
         <div className="second-page-center">
-          <img src="/logo.svg" />
-          <h1>Unlock Seamless <br/> Efficiency</h1>
+          <motion.div
+            className="logo"
+            initial={{ scale: 0.5, y: -100 }} // Start scaled down as it transitions from the first page
+            animate={{ scale: 0.5, y: 0 }} // Maintain the small size but move into place
+            transition={{ duration: 1 }}
+          >
+            <img src="/logo.svg" alt="logo" />
+          </motion.div>
+          {/* <img src="/logo.svg" /> */}
+          <h1>Unlock Seamless <br /> Efficiency</h1>
           <ButtonComponent text="Join Waitlist" />
         </div>
 
-        <div className="circular-images">
-          <img className="circle-image" src="/To Do.png" alt="Mini Image 1" width="150px"/>
-          <img className="circle-image" src="/Event.png" alt="Mini Image 2" width="200px" />
-          <img className="circle-image" src="/Tab.png" alt="Mini Image 3" width="100px" />
-          <img className="circle-image" src="/Tab.png" alt="Mini Image 4"  width="100px"/>
-          <img className="circle-image" src="/Reservation.png" alt="Mini Image 5" width="190px" />
-          <img className="circle-image" src="/Card.png" alt="Mini Image 6" width="200px" />
-          <img className="circle-image" src="/Tab.png" alt="Mini Image 7" width="100px" />
-          <img className="circle-image" src="/Event.png" alt="Mini Image 8" width="200px" />
-          <img className="circle-image" src="/Tab.png" alt="Mini Image 9" width="100px"  />
-          <img className="circle-image" src="/tickets_card.png" alt="Mini Image 10" width="260px"  />
-        </div>
 
-      </div>
+        <motion.div className="circular-images">
+          <motion.img className="circle-image" src="/To Do.png" alt="Mini Image 1" width="150px"
+            initial={{ x: '100vw' }} // off-screen to the left
+            animate={{ x: 0 }}
+            transition={{ delay: 1, duration: 1.4 }} />
+          <motion.img className="circle-image" src="/Event.png" alt="Mini Image 2" width="200px"
+            initial={{ x: '100vw' }} // off-screen to the left
+            animate={{ x: 0 }}
+            transition={{ delay: 1, duration: 1.4 }} 
+          />
+          <motion.img className="circle-image" src="/Tab.png" alt="Mini Image 3" width="100px"
+            initial={{ x: '100vw' }} // off-screen to the left
+            animate={{ x: 0 }}
+            transition={{ delay: 1, duration: 1.4 }} />
+          <motion.img className="circle-image" src="/Tab.png" alt="Mini Image 4" width="100px"
+            initial={{ x: '100vw' }} // off-screen to the left
+            animate={{ x: 0 }}
+            transition={{ delay: 1, duration: 1.4 }} />
+          <motion.img className="circle-image" src="/Reservation.png" alt="Mini Image 5" width="190px"
+            initial={{ x: '100vw' }} // off-screen to the left
+            animate={{ x: 0 }}
+            transition={{ delay: 1, duration: 1.4 }} />
+          <motion.img className="circle-image" src="/Card.png" alt="Mini Image 6" width="200px"
+           initial={{ x: '-100vw' }} // off-screen to the left
+           animate={{ x: 0 }}
+           transition={{ delay: 1, duration: 1.4 }}/>
+          <motion.img className="circle-image" src="/Tab.png" alt="Mini Image 7" width="100px"
+           initial={{ x: '-100vw' }} // off-screen to the left
+           animate={{ x: 0 }}
+           transition={{ delay: 1, duration: 1.4 }}/>
+          <motion.img className="circle-image" src="/Event.png" alt="Mini Image 8" width="200px"
+           initial={{ x: '-100vw' }} // off-screen to the left
+           animate={{ x: 0 }}
+           transition={{ delay: 1, duration: 1.4 }}/>
+          <motion.img className="circle-image" src="/Tab.png" alt="Mini Image 9" width="100px"
+           initial={{ x: '-100vw' }} // off-screen to the left
+           animate={{ x: 0 }}
+           transition={{ delay: 1, duration: 1.4 }}/>
+          <motion.img className="circle-image" src="/tickets_card.png" alt="Mini Image 10" width="260px"
+           initial={{ x: '-100vw' }} // off-screen to the left
+           animate={{ x: 0 }}
+           transition={{ delay: 1, duration: 1.4 }}/>
+        </motion.div>
+
+      </motion.div>
 
       <div className="feature-heading">
         <p className="detail-text">Our Features</p>
@@ -90,7 +146,7 @@ function LandingPage() {
 
         </div>
       </div>
-      <h1 style={{width:"60vw", padding:"2.5em 0 0 30px"}}>Fluid AI was born out of a desire to simplify and streamline modern life</h1>
+      <h1 style={{ width: "60vw", padding: "2.5em 0 0 30px" }}>Fluid AI was born out of a desire to simplify and streamline modern life</h1>
       <div className="feature-images-container">
         <ImageOverlay />
       </div>
@@ -121,7 +177,13 @@ function LandingPage() {
           <form>
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Country" />
+            <select id="options" className="dropdown">
+              <option value="search">
+                United Arab Emirate</option>
+              <option value="settings">United Arab Emirate</option>
+              <option value="documents">United Arab Emirate</option>
+              <option value="help">United Arab Emirate</option>
+            </select>
           </form>
 
           <ButtonComponent text="Join Waitlist" />

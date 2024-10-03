@@ -1,28 +1,19 @@
+/* eslint-disable react/prop-types */
 import ScrollDownBtn from "../components/ScrollDownBtn"
+import { motion } from 'framer-motion';
 import "./pages.css"
+// import { useState } from "react";
 
-function FirstPage() {
-
-  const [scrolling, setScrolling] = useState(false);
-
-  // Handle scroll event
-  const handleScroll = () => {
-    setScrolling(true);
-  };
-
-  useEffect(() => {
-    if (scrolling) {
-      const timer = setTimeout(() => {
-        setScrolling(false);
-      }, 1000); // Adjust the timing for how long the second page is visible
-
-      return () => clearTimeout(timer); // Cleanup the timer
-    }
-  }, [scrolling]);
-
+function FirstPage({ onAnimate, isAnimating }) {
 
   return (
-     <div className={`first-page-container ${scrolling ? 'fade-out' : ''}`}>
+
+    <motion.div 
+      className="first-page-container"
+      initial={{ opacity: 1 }}
+      animate={{ opacity: isAnimating ? 0 : 1 }} 
+      transition={{ duration: 1 }}
+    >
       <nav>
         <div className="left-side-nav">
           <p>What we believe</p>
@@ -33,11 +24,16 @@ function FirstPage() {
           <p>The waitlist</p>
         </div>
       </nav>
-      <div className="logo">
-        <img src="/logo.svg" alt="logo"/>
-      </div>
-      <ScrollDownBtn/>
-    </div>
+      <motion.div 
+        className="logo"
+        initial={{ scale: 1, y: 0 }}
+        animate={{ scale: isAnimating ? 0.5 : 1, y: isAnimating ? -100 : 0 }} // Shrink and move up when animating
+        transition={{ duration: 1 }}
+      >
+        <img src="/logo.svg" alt="logo" />
+      </motion.div>
+      <ScrollDownBtn onclick={onAnimate} />
+    </motion.div>
   )
 }
 
